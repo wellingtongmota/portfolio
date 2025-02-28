@@ -4,7 +4,7 @@ import { Wrapper } from "@/components/wrapper"
 export function Education() {
   return (
     <Wrapper className="flex-col gap-4">
-      <h2 className="pb-2 text-3xl font-bold">Formação</h2>
+      <h2 className="text-2xl font-bold">Formação</h2>
 
       <EducationCard
         img="/icons/anhanguera.jpg"

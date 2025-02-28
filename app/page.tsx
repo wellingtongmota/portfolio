@@ -1,6 +1,7 @@
 import { Wrapper } from "@/components/wrapper"
 import { Hero } from "./_components/hero"
 import { Education } from "./_components/education"
+import { Certificates } from "./_components/certificates"
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Wrapper className="flex-col gap-8">
         <Hero />
         <Education />
+        <Certificates />
       </Wrapper>
     </div>
   )
