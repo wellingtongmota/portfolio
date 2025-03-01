@@ -4,7 +4,9 @@ export function Hero() {
   return (
     <Wrapper className="flex-col items-center gap-8 pb-2 md:flex-row md:justify-between">
       <div className="flex-1 justify-center space-y-4 sm:items-start">
-        <h1 className="text-4xl font-extrabold">Olá, sou Wellington!</h1>
+        <h1 className="animate-typewriter w-fit overflow-hidden border-r-2 border-white text-4xl font-bold whitespace-nowrap">
+          Olá, sou Wellington!
+        </h1>
         <p className="sm:text-md max-w-lg text-sm">
           Desenvolvedor Frontend, especializado na criação de sites dinâmicos e
           performáticos com{" "}
@@ -14,7 +16,7 @@ export function Hero() {
         </p>
       </div>
 
-      <div className="flex flex-1 justify-center overflow-hidden rounded-4xl">
+      <div className="animate-fade flex flex-1 justify-center overflow-hidden rounded-4xl opacity-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/image_perfil.jpg"
