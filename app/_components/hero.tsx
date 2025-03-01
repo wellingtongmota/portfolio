@@ -7,9 +7,10 @@ export function Hero() {
         <h1 className="text-4xl font-extrabold">Olá, sou Wellington!</h1>
         <p className="sm:text-md max-w-lg text-sm">
           Desenvolvedor Frontend, especializado na criação de sites dinâmicos e
-          performáticos com React, TypeScript, Next.js e Vite. Tenho experiência
-          no desenvolvimento de micro-SaaS, utilizando PostgreSQL e ORMs como
-          Prisma e Drizzle para modelagem de dados.
+          performáticos com{" "}
+          <span className="font-bold">React, TypeScript, Next.js e Vite</span>.
+          Tenho experiência no desenvolvimento de micro-SaaS, utilizando
+          PostgreSQL e ORMs como Prisma e Drizzle para modelagem de dados.
         </p>
       </div>
 
