@@ -38,8 +38,7 @@
 }
 
 @theme {
-  --animate-typewriter:
-    typewriter 3s steps(20) 1s forwards, blink 0.5s infinite;
+  --animate-typewriter: typewriter 3s steps(20) 1s forwards;
 
   @keyframes typewriter {
     0% {

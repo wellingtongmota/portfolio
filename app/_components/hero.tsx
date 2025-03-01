@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <Wrapper className="flex-col items-center gap-8 pb-2 md:flex-row md:justify-between">
       <div className="flex-1 justify-center space-y-4 sm:items-start">
-        <h1 className="animate-typewriter w-fit overflow-hidden border-r-2 border-white text-4xl font-bold whitespace-nowrap">
+        <h1 className="animate-typewriter w-fit overflow-hidden text-4xl font-bold whitespace-nowrap">
           Olá, sou Wellington!
         </h1>
         <p className="sm:text-md max-w-lg text-sm">
