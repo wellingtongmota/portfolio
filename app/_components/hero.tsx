@@ -5,11 +5,11 @@ export function Hero() {
     <Wrapper className="flex-col items-center gap-8 pb-2 md:flex-row md:justify-between">
       <div className="flex-1 justify-center space-y-4 sm:items-start">
         <h1 className="text-4xl font-extrabold">Olá, sou Wellington!</h1>
-        <p className="sm:text-md max-w-lg text-sm lg:text-xl">
+        <p className="sm:text-md max-w-lg text-sm">
           Desenvolvedor Frontend, especializado na criação de sites dinâmicos e
           performáticos com React, TypeScript, Next.js e Vite. Tenho experiência
           no desenvolvimento de micro-SaaS, utilizando PostgreSQL e ORMs como
-          Prisma e Drizzle para modelagem de dados eficiente.
+          Prisma e Drizzle para modelagem de dados.
         </p>
       </div>
 
@@ -18,7 +18,7 @@ export function Hero() {
         <img
           src="/image_perfil.jpg"
           alt="Imagem de perfil"
-          className="aspect-square max-w-xs min-w-24 overflow-hidden rounded-4xl"
+          className="aspect-square max-w-56 min-w-24 overflow-hidden rounded-4xl"
         />
       </div>
     </Wrapper>
