@@ -20,7 +20,7 @@ export function ProjectCard({
     <div className="group grid overflow-hidden rounded-md border md:grid-cols-2 md:gap-4">
       <div className="bg-accent flex max-h-96 justify-center p-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={img} alt="Print moviesNook" className="object-contain" />
+        <img src={img} alt={title} className="object-contain" />
       </div>
       <div className="space-y-4 p-4 md:p-12">
         <div className="flex items-center justify-between gap-1">

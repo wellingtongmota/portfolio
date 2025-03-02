@@ -24,6 +24,23 @@ export function Projects() {
         Movie Database (TMDB) e salvar seus filmes favoritos usando a API
         Context.
       </ProjectCard>
+
+      <ProjectCard
+        img="/projects/camping.png"
+        title="Camping - Fonte da Vida"
+        url="https://wellingtongmota.github.io/camping/"
+        tecnologies={[
+          "Vite",
+          "JavaScript",
+          "React Router",
+          "Chakra Ui",
+          "Formik",
+          "Yup"
+        ]}
+      >
+        Site para reservar vaga no acampamento de jovens da igreja Fonte da
+        Vida.
+      </ProjectCard>
     </Wrapper>
   )
 }
