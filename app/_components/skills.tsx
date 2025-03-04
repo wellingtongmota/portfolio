@@ -6,18 +6,18 @@ export function Skills() {
     <Wrapper className="animate-fade flex-col pt-4 opacity-0">
       <h2 className="text-2xl font-bold">Skills</h2>
       <p className="pt-2 pb-8 text-sm">
-        As habilidades, ferramentas e tecnologias em que sou realmente bom.
+        As habilidades, ferramentas e tecnologias com as quais já trabalhei.
       </p>
 
       <div className="flex w-full flex-wrap items-center justify-center gap-12">
         <IconSkill img="/skills/icon_react.svg" title="React" />
-        <IconSkill img="/skills/icon_javascript.svg" title="JavaScript" />
         <IconSkill img="/skills/icon_typescript.svg" title="TypeScript" />
         <IconSkill img="/skills/icon_nodejs.svg" title="Node.js" />
         <IconSkill img="/skills/icon_nextjs.svg" title="Next.Js" />
         <IconSkill img="/skills/icon_vite.svg" title="Vite" />
         <IconSkill img="/skills/icon_tailwindcss.svg" title="Tailwindcss" />
         <IconSkill img="/skills/icon_git.svg" title="Git" />
+        <IconSkill img="/skills/icon_docker.svg" title="Docker" />
         <IconSkill
           img="/skills/icon_expressjs.svg"
           title="Express.JS"

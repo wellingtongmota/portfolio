@@ -14,8 +14,8 @@ export function IconSkill({ className, img, title, ...props }: IconSkillProps) {
       {...props}
     >
       <Image
-        width={48}
-        height={48}
+        width={40}
+        height={40}
         src={img}
         alt={title}
         className={cn(["object-contain", className])}
