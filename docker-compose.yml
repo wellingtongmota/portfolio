@@ -9,9 +9,10 @@ services:
     environment:
       - NODE_ENV=production
     deploy:
-      replicas: 2
+      mode: replicated
+      replicas: 1
       restart_policy:
-        condition: on-failure
+        condition: any
       resources:
         limits:
           cpus: "0.2"
