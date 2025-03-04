@@ -1,0 +1,31 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app-next-portfolio
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    networks:
+      - traefik_public
+      - npm_network
+      - app_network
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: 512M
+      placement:
+        constraints:
+          - node.role == manager
+
+networks:
+  traefik_public:
+    external: true
+  npm_network:
+    external: true
+  app_network:
+    external: true
