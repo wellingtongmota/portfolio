@@ -11,6 +11,7 @@ export function Projects() {
         img="/projects/moviesNook.png"
         title="moviesNook"
         url="https://wellingtongmota.github.io/movies-nook/"
+        repository="https://github.com/wellingtongmota/movies-nook"
         tecnologies={[
           "Vite",
           "TypeScript",
@@ -29,6 +30,7 @@ export function Projects() {
         img="/projects/camping.png"
         title="Camping - Fonte da Vida"
         url="https://wellingtongmota.github.io/camping/"
+        repository="https://github.com/wellingtongmota/camping"
         tecnologies={[
           "Vite",
           "JavaScript",
