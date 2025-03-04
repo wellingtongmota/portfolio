@@ -6,7 +6,7 @@ services:
     container_name: app-next-portfolio
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3030:3000"
     networks:
       - traefik_public
       - npm_network
