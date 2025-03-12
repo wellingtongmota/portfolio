@@ -8,6 +8,24 @@ export function Projects() {
       <h2 className="text-2xl font-bold">Projetos</h2>
 
       <ProjectCard
+        img="/projects/justhome.png"
+        title="JustHome"
+        url="https://justhome.nookdev.com.br/"
+        repository="https://github.com/wellingtongmota/justhome"
+        tecnologies={[
+          "Next.Js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Keen Slider",
+          "Lucide React"
+        ]}
+      >
+        Este é um site de demonstração da Justhome, uma agência imobiliária. O
+        site exibe diversas funcionalidades e recursos que podem ser
+        implementados para um negócio imobiliário real.
+      </ProjectCard>
+
+      <ProjectCard
         img="/projects/moviesNook.png"
         title="moviesNook"
         url="https://wellingtongmota.github.io/movies-nook/"
