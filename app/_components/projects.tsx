@@ -8,8 +8,8 @@ export function Projects() {
       <h2 className="text-2xl font-bold">Projetos</h2>
 
       <ProjectCard
-        img="/projects/justhome.png"
-        title="JustHome"
+        img="/projects/justhome_print.png"
+        title="Landing Page - JustHome"
         url="https://justhome.nookdev.com.br/"
         repository="https://github.com/wellingtongmota/justhome"
         tecnologies={[
@@ -26,7 +26,18 @@ export function Projects() {
       </ProjectCard>
 
       <ProjectCard
-        img="/projects/moviesNook.png"
+        img="/projects/nextcent_print.png"
+        title="Landing Page - Nextcent"
+        url="https://nextcent.nookdev.com.br/"
+        repository="https://github.com/wellingtongmota/next-cent"
+        tecnologies={["Next.Js", "TypeScript", "Tailwind CSS", "Lucide React"]}
+      >
+        Landing Page baseado em um design do figma. Créditos ao autor do design
+        estão no README do repositório.
+      </ProjectCard>
+
+      <ProjectCard
+        img="/projects/moviesNook_print.png"
         title="moviesNook"
         url="https://wellingtongmota.github.io/movies-nook/"
         repository="https://github.com/wellingtongmota/movies-nook"
