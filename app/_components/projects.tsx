@@ -8,6 +8,37 @@ export function Projects() {
       <h2 className="text-2xl font-bold">Projetos</h2>
 
       <ProjectCard
+        img="/projects/todo_print.png"
+        title="todoNookdev"
+        url="https://todo.nookdev.com.br/"
+        repository="https://github.com/wellingtongmota/todo"
+        tecnologies={[
+          "Next.Js",
+          "TypeScript",
+          "Better Auth",
+          "Prisma",
+          "React Hook Form",
+          "Zod",
+          "date-fns",
+          "Tailwind CSS",
+          "Lucide React"
+        ]}
+      >
+        Site desenvolvido com Next.Js. Criado para mostrar o uso das Server
+        Actions, integração com banco de dados PostgreSQL através do Prisma ORM
+        e autenticação com o framework Better Auth.
+        <br />
+        <p className="mt-1">Funcionalidades:</p>
+        <ul className="mt-1 list-inside list-disc">
+          <li>Autenticação de usuário</li>
+          <li>Autenticação pelo GitHub</li>
+          <li>Verificação por e-mail</li>
+          <li>CRUD de to-dos</li>
+          <li>Temas claro e escuro</li>
+        </ul>
+      </ProjectCard>
+
+      <ProjectCard
         img="/projects/justhome_print.png"
         title="Landing Page - JustHome"
         url="https://justhome.nookdev.com.br/"

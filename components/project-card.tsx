@@ -21,7 +21,7 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="grid overflow-hidden rounded-md border md:grid-cols-2 md:gap-4">
-      <div className="bg-accent flex max-h-96 justify-center p-4">
+      <div className="bg-accent flex justify-center p-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={img} alt={title} className="object-contain" />
       </div>
