@@ -1,7 +1,59 @@
-node_modules
-npm-debug.log
-Dockerfile
-docker-compose.yml
+# Dependencies (installed inside Docker, never copied)
+node_modules/
+npm-debug.log*
+
+# Next.js build outputs (always generated during `next build`)
+.next/
+out/
+dist/
+build/
+.vercel/
+
+# Local development and editor files
+.git/
+.gitignore
+.gitattributes
+.vscode/
+
+# Environment variables (only commit template files)
+.env
+.env*.local
+.env.development
+.env.test
+.env.production.local
+
+# Docker configuration files (not needed inside build context)
+Dockerfile*
 .dockerignore
-.git
-.next
+compose.yaml
+compose.yml
+docker-compose*.yaml
+docker-compose*.yml
+
+# Cache directories and temporary data
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.swc/
+.turbo/
+.tmp/
+.temp/
+
+# TypeScript build metadata
+*.tsbuildinfo
+
+# Sensitive or unnecessary configuration files
+*.pem
+.editorconfig
+.prettierrc*
+.prettierignore*
+prettier.config.*
+.eslintrc*
+eslint.config.*
+.stylelintrc*
+stylelint.config.*
+.babelrc*
+*.iml
+*.ipr
+*.iws

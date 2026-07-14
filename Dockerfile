@@ -1,40 +1,60 @@
-# Etapa 1: Construção
-FROM node:20-alpine AS builder
+# Stage 1: Dependencies Installation Stage
+ARG NODE_VERSION=24-alpine
+
+FROM node:${NODE_VERSION} AS dependencies
+
+# Set working directory
+WORKDIR /app
+
+# Copy package-related files first to leverage Docker's caching mechanism
+COPY package.json package-lock.json* .npmrc* ./
+
+# Install project dependencies with frozen lockfile for reproducible builds
+RUN --mount=type=cache,target=/root/.npm \
+  npm ci --no-audit --no-fund
+
+# Stage 2: Build Next.js application in standalone mode
+FROM node:${NODE_VERSION} AS builder
 
 WORKDIR /app
 
-# Copia os arquivos de dependências
-COPY package.json package-lock.json ./
+# Copy project dependencies from dependencies stage
+COPY --from=dependencies /app/node_modules ./node_modules
 
-# Instala as dependências
-RUN npm install
-
-# Copia o restante do código
+# Copy application source code
 COPY . .
 
-# Build da aplicação
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Build Next.js application
 RUN npm run build
 
-# Remove as devDependencies para reduzir o tamanho da imagem
-RUN npm prune --production
+# Stage 3: Run Next.js application
+FROM node:${NODE_VERSION} AS runner
 
-# Etapa 2: Execução
-FROM node:20-alpine
-
+# Set working directory
 WORKDIR /app
 
-# Copia apenas os arquivos necessários do estágio de construção
-COPY --from=builder /app/package.json ./
-COPY --from=builder /app/package-lock.json ./
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
+# Set production environment variables
+ENV NODE_ENV=production
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
 
-# Instala apenas as dependências de produção (não é necessário instalar as devDependencies)
-RUN npm install --only=production
+# Copy production assets
+COPY --from=builder --chown=node:node /app/public ./public
 
-# Expondo a porta 3000
+# Set the correct permission for prerender cache
+RUN mkdir .next && chown node:node .next
+
+# Automatically leverage output traces to reduce image size
+COPY --from=builder --chown=node:node /app/.next/standalone ./
+COPY --from=builder --chown=node:node /app/.next/static ./.next/static
+
+# Switch to non-root user for security best practices
+USER node
+
 EXPOSE 3000
 
-# Comando para iniciar a aplicação
-CMD ["npm", "start"]
+# Start Next.js standalone server
+CMD ["node", "server.js"]
